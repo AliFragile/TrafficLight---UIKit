@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CMQ-N6-zbh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Traffic Light View Controller-->
+        <scene sceneID="hRh-Sw-oTa">
+            <objects>
+                <viewController storyboardIdentifier="TrafficLightViewController" id="CMQ-N6-zbh" customClass="TrafficLightViewController" customModule="taskk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9kh-8W-X3I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="pbd-6I-cbB">
+                                <rect key="frame" x="39" y="98" width="336" height="724"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="149" translatesAutoresizingMaskIntoConstraints="NO" id="cad-6c-4rR">
+                                        <rect key="frame" x="93" y="0.0" width="150" height="150"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Leo-5g-fRp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nr3-vX-Cmf">
+                                        <rect key="frame" x="93" y="202" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-N5-WPh">
+                                        <rect key="frame" x="93" y="404" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt8-3h-e7P">
+                                        <rect key="frame" x="0.0" y="606" width="336" height="118"/>
+                                        <color key="backgroundColor" red="0.0015895706601440907" green="0.46232187747955322" blue="0.99191862344741821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="336" id="0tb-aQ-rnb"/>
+                                            <constraint firstAttribute="height" constant="118" id="cU3-gn-zeR"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="START">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="CMQ-N6-zbh" eventType="touchUpInside" id="9pi-Vi-SSp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cad-6c-4rR" firstAttribute="height" secondItem="nr3-vX-Cmf" secondAttribute="height" id="2EQ-0T-4xq"/>
+                                    <constraint firstItem="Dt8-3h-e7P" firstAttribute="leading" secondItem="pbd-6I-cbB" secondAttribute="leading" id="2zZ-La-kuC"/>
+                                    <constraint firstAttribute="trailing" secondItem="cad-6c-4rR" secondAttribute="trailing" constant="93" id="Bvk-za-J6P"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dt8-3h-e7P" secondAttribute="bottom" id="E1T-WJ-045"/>
+                                    <constraint firstItem="nr3-vX-Cmf" firstAttribute="leading" secondItem="pbd-6I-cbB" secondAttribute="leading" constant="93" id="RQf-Jh-a3y"/>
+                                    <constraint firstItem="cad-6c-4rR" firstAttribute="leading" secondItem="pbd-6I-cbB" secondAttribute="leading" constant="93" id="SRA-Gu-BQZ"/>
+                                    <constraint firstItem="nr3-vX-Cmf" firstAttribute="height" secondItem="RTP-N5-WPh" secondAttribute="height" id="Vn8-56-9BS"/>
+                                    <constraint firstItem="RTP-N5-WPh" firstAttribute="leading" secondItem="pbd-6I-cbB" secondAttribute="leading" constant="93" id="XoT-ok-0tI"/>
+                                    <constraint firstAttribute="trailing" secondItem="RTP-N5-WPh" secondAttribute="trailing" constant="93" id="Zjs-A8-N3j"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dt8-3h-e7P" secondAttribute="trailing" id="mPD-Hw-I4P"/>
+                                    <constraint firstItem="nr3-vX-Cmf" firstAttribute="width" secondItem="RTP-N5-WPh" secondAttribute="width" id="oWH-8E-2Z7"/>
+                                    <constraint firstAttribute="trailing" secondItem="nr3-vX-Cmf" secondAttribute="trailing" constant="93" id="s7A-K7-opl"/>
+                                    <constraint firstItem="cad-6c-4rR" firstAttribute="width" secondItem="nr3-vX-Cmf" secondAttribute="width" id="vJr-TZ-lBs"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bkt-Yx-97s"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="pbd-6I-cbB" firstAttribute="top" secondItem="Bkt-Yx-97s" secondAttribute="top" constant="50" id="3qy-K8-aWV"/>
+                            <constraint firstItem="Bkt-Yx-97s" firstAttribute="bottom" secondItem="pbd-6I-cbB" secondAttribute="bottom" constant="44" id="6Fm-kk-Gxg"/>
+                            <constraint firstItem="pbd-6I-cbB" firstAttribute="centerX" secondItem="9kh-8W-X3I" secondAttribute="centerX" id="Pno-An-Fh7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Dt8-3h-e7P" id="q6G-hE-kZA"/>
+                        <outlet property="greenLight" destination="RTP-N5-WPh" id="12N-Sc-orw"/>
+                        <outlet property="redLight" destination="cad-6c-4rR" id="3an-Cu-mri"/>
+                        <outlet property="yellowLight" destination="nr3-vX-Cmf" id="6nW-X4-mVa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohN-7r-QNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.89855072463774" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
